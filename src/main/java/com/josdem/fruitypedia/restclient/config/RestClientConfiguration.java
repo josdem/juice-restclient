@@ -16,4 +16,5 @@ public class RestClientConfiguration {
     public RestClient juiceRestClient() {
         return RestClient.create(applicationProperties.getUrl());
     }
+
 }
