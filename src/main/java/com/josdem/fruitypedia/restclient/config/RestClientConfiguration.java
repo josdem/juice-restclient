@@ -13,7 +13,7 @@ public class RestClientConfiguration {
     private final ApplicationProperties applicationProperties;
 
     @Bean
-    public RestClient restClient() {
+    public RestClient juiceRestClient() {
         return RestClient.create(applicationProperties.getUrl());
     }
 }
