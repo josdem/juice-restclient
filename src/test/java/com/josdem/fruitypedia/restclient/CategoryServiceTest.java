@@ -28,11 +28,17 @@ class CategoryServiceTest {
         log.info("Running: {}", testInfo.getDisplayName());
         List<Category> categories = categoryService.getCategoriesByLanguage("en");
         assertEquals(4, categories.size(), "should have four categories");
-        assertAll( "categories",
+        assertAll( "names",
                 () -> assertEquals("Healing", categories.get(0).getName(), "should have Healing category"),
                 () -> assertEquals("Energy", categories.get(1).getName(), "should have Energy category"),
                 () -> assertEquals("Healthy", categories.get(2).getName(), "should have Healthy category"),
                 () -> assertEquals("Boost", categories.get(3).getName(), "should have Boost category")
+        );
+        assertAll( "IDs",
+                () -> assertEquals(5, categories.get(0).getId(), "should have Healing ID"),
+                () -> assertEquals(6, categories.get(1).getId(), "should have Energy ID"),
+                () -> assertEquals(7, categories.get(2).getId(), "should have Healthy ID"),
+                () -> assertEquals(8, categories.get(3).getId(), "should have Boost ID")
         );
     }
 
