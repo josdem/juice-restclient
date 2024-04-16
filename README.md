@@ -20,5 +20,19 @@ gradle test --tests ${testName}
 where:
 - `${testName}` is your test name
 
+### To publish library to artifactory using Gradle
+
+```bash
+export ARTIFACTORY_USER=${username}
+export ARTIFACTORY_PASSWORD=${password}
+gradle publish
+```
+where:
+
+- `${username}` Is artifactory username
+- `${password}` Is artifactory password
+
+**Note:** If you want to learn more and publish your own library, feel free to drop me a message on my home page website and ask for a Jfrog credentials.
+
 #### Read this as reference:
 - https://josdem.io/techtalk/java/junit5/
